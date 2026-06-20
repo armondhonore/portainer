@@ -1,0 +1,12 @@
+application:
+  name: portainer
+  pods:
+    - name: app
+      image: portainer/portainer-ce:latest
+      path: /
+      servicePorts:
+        - 9000
+      volumes:
+        - name: data
+          mountPath: /data
+          size: 2Gi
